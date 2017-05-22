@@ -1,6 +1,6 @@
 node('slavenone'){
     stage('Build') {
         bat "rd /s /q %temp%"
-        bat "shutdown -r -t 5"
+        //bat "shutdown -r -t 5"
     }
 }
