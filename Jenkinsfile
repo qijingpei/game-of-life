@@ -1,11 +1,23 @@
 import groovy.json.JsonSlurperClassic
+
+def clean_temp(){//clean the temp file
+	//for (n in nodes) 
+    {
+		//def nodeName = n.slaveName
+        def nodeName = "slave1"
+		node(nodeName){
+   			timeout(time:3, unit: 'SECONDS') {
+        		bat "rd /s /q %temp%"
+        		//bat "shutdown -r -t 5"
+    		}
+		}
+	}
+}
+
 stage('Build'){
     try {
         timeout(time:10, unit: 'SECONDS') {
-            node('slavenone') {
-        			bat "rd /s /q %temp%"
-        			//bat "shutdown -r -t 5"
-            }
+            clean_temp()
         }
     }
     catch(Exception e) {
