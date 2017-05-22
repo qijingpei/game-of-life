@@ -20,6 +20,7 @@ try {
 }
 
 nodes = jobConfig.nodes	
+
 def clean_temp(){//clean the temp file
 	for (n in nodes)  {
 		def nodeName = n.slaveName
@@ -31,6 +32,7 @@ def clean_temp(){//clean the temp file
     			}
 		}
 	}
+	parallel deployJobs
 }
 
 stage('Build'){
