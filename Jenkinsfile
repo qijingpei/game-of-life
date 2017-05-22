@@ -1,10 +1,5 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                bat 'set'
-            }
-        }
+node {
+    stage('Build') {
+        bat 'set'
     }
 }
