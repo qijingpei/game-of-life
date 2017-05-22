@@ -9,6 +9,6 @@ stage('Build'){
         }
     }
     catch(err) {
-        
+        echo "${err}"
     }
 }
