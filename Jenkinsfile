@@ -1,3 +1,4 @@
+import groovy.json.JsonSlurperClassic
 stage('Build'){
     try {
         timeout(time:3, unit: 'SECONDS') {
