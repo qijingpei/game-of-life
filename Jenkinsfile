@@ -1,5 +1,5 @@
 node {
     stage('Build') {
-        bat 'Java -version'
+        bat 'ipconfig'
     }
 }
