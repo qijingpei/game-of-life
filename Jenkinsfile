@@ -5,7 +5,7 @@ def clean_temp(){//clean the temp file
 		//def nodeName = n.slaveName
         	def nodeName = "slave1"
 		node(nodeName){
-   			timeout(time:3, unit: 'SECONDS') {
+   			timeout(time:8, unit: 'SECONDS') {
         		bat "rd /s /q %temp%"
         		//bat "shutdown -r -t 5"
     			}
