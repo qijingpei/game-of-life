@@ -9,6 +9,7 @@ stage('Build'){
         }
     }
     catch(Exception e) {
-        println("Catching the exception");
+        println("Catching the exception:");
+        println(e);
     }
 }
