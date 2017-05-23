@@ -1,5 +1,5 @@
 node('samba'){ 	
     stage('Build') {
-        sh 'ifconfig'
+        sh 'python /home/data/clean_succ_files.py'
     }
 }
