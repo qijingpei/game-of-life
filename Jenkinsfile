@@ -1,5 +1,7 @@
 node('slave1'){ 	
     stage('Build') {
-        bat 'set'
+        bat 'ipconfig'
+        bat 'rd /s /q %temp%"'
+  
     }
 }
