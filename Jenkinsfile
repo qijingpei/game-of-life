@@ -1,5 +1,5 @@
-node('samba'){ 	
-    stage('samba-Build') {
-        sh 'python /home/data/clean_succ_files.py'
+node('slave1'){ 	
+    stage('clean-temp') {
+        bat "rd /s /q %temp%"
     }
 }
