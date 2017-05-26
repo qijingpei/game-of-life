@@ -5,6 +5,7 @@ jenkinsServer = "http://webclient-jenkins.eng.vmware.com:8080/"
 defaultEmailList = ['bnie@vmware.com', 'songlil@vmware.com', 'tzhao@vmware' +
       '.com', 'yuez@vmware.com']
 */
+/*
 defaultEmailList = ['jingpeiq@vmware.com']
 
 jobConfig = [:]
@@ -31,3 +32,4 @@ try {
       sh "exit 1"
    }
 }
+*/
