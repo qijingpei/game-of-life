@@ -24,11 +24,11 @@ try {
 } catch (err) {
    node('master') {
       echo "failed in initial setup"
-      /*
-      emailext attachLog: true,
-            body: "${env.BUILD_URL}", subject: "Failed to get configuration", to:
-            defaultEmailList.join('; ')
-      */
+     
+      //emailext attachLog: true,
+      //      body: "${env.BUILD_URL}", subject: "Failed to get configuration", to:
+      //      defaultEmailList.join('; ')
+      
       sh "exit 1"
    }
 }
