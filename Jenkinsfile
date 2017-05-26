@@ -4,6 +4,9 @@ jenkinsServer = "http://webclient-jenkins.eng.vmware.com:8080/"
 configURL = 'http://webclient-config.eng.vmware.com:8181/api/staticconfig'
 
 def response = httpRequest url: configURL, ignoreSslErrors: true
+def config = new JsonSlurperClassic().parseText(response.content)
+jobConfig = config[configKey]
+echo jobConfig.toString()
 /*
 defaultEmailList = ['bnie@vmware.com', 'songlil@vmware.com', 'tzhao@vmware' +
       '.com', 'yuez@vmware.com']
