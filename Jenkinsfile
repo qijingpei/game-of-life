@@ -1,4 +1,4 @@
-import groovy.json.JsonSlurperClassic
+import groovy.json.*
 
 jenkinsServer = "http://webclient-jenkins.eng.vmware.com:8080/"
 configURL = 'http://webclient-config.eng.vmware.com:8181/api/staticconfig'
