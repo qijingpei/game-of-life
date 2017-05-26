@@ -2,6 +2,8 @@ import groovy.json.JsonSlurperClassic
 
 jenkinsServer = "http://webclient-jenkins.eng.vmware.com:8080/"
 configURL = 'http://webclient-config.eng.vmware.com:8181/api/staticconfig'
+jobConfig = [:]
+configKey = env.JOB_NAME.replaceAll('-', '_')
 
 def response = httpRequest url: configURL, ignoreSslErrors: true
 def config = new JsonSlurperClassic().parseText(response.content)
